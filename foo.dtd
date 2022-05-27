@@ -1,0 +1,7 @@
+foo [
+        <!ELEMENT foo (name,price,description,calories)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT price (#PCDATA)>
+        <!ELEMENT description (#PCDATA)>
+        <!ELEMENT calories (#PCDATA)>
+]>
