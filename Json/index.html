@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="./js/weather.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Moon</title>
+</head>
+
+<body ng-app="weatherApp">
+    <div ng-controller="WeatherCtrl" class="container" style="background-color: rgb(227, 196, 152);">
+        <div class="lightning">
+            <img src="./img/lightning.png">
+        </div>
+        <div class="sun" style="transform: rotate(-120deg) translate(40vw) rotate(-120deg);"></div>
+        <img class="forest" src="./img/forest.svg">
+        <div class="date">Tue&nbsp;&nbsp;&nbsp;31-5-2022</div>
+        <div class="time">9:16</div>
+
+        <div class="weather">
+            <div class="city">Hanoi, Viet Nam</div>
+            <div class="icon"><img src="./img/cloudy.png"></div>
+            <div class="temp">
+                <div class="curr-temp"><span>Current: {{current | number : 1}} °C</span></div>
+                <hr>
+                <div class="max-min">
+                    Feels like: {{ temp_min | number: 1}} <br>
+                    Temp range: {{ temp_max | number: 1}} <br>
+                    Wind: {{wind_speed}} km/h
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="fog"></div>
+        <div class="rain">
+            <div class="layer-1">
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+            </div>
+            <div class="layer-2">
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+                <div class="rain-drop"></div>
+            </div>
+        </div>
+        <div class="snowflakes" aria-hidden="true">
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+            <div class="snowflake">❅</div>
+            <div class="snowflake">❆</div>
+        </div>
+        <div class="sakuras">
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+            <div class="snowflake" style="display: block;">🌸</div>
+        </div>
+    </div>
+
+    <script src="./Moon_files/script.js"></script>
+
+</body>
+
+</html>
