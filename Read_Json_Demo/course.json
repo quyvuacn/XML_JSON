@@ -1,0 +1,9 @@
+{
+  "name" : "Vũ Viết Quý",
+  "course" : "Đọc file json với Java",
+  "subjects" : [
+    "subject1: JSON introduction",
+    "subject2: JSON syntax",
+    "subject3: JSON read file"
+  ]
+}
