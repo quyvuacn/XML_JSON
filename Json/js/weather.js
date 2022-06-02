@@ -1,5 +1,7 @@
-const API_WEATHER = 'https://api.openweathermap.org/data/2.5/weather?&lat=21.027763&lon=105.834160&appid=eb8a0f01c55e8a90eae383cac5461c16&units=metric'
+const API_KEY = 'eb8a0f01c55e8a90eae383cac5461c16' // appid
+const API_WEATHER = `https://api.openweathermap.org/data/2.5/weather?&lat=21.027763&lon=105.834160&appid=${API_KEY}&units=metric`
 const weatherApp = angular.module('weatherApp',[])
+
 
 weatherApp.controller('WeatherCtrl', function($scope,$http){
     $http.get(API_WEATHER).then(function({data}){
@@ -17,7 +19,7 @@ weatherApp.controller('WeatherCtrl', function($scope,$http){
             $scope.wind_speed = data.wind.speed
         $scope.changeKey = () =>{
             let q = $scope.keySearch.split(' ').join('%20')
-            $http.get(`https://api.openweathermap.org/data/2.5/weather?&q=${q}&appid=eb8a0f01c55e8a90eae383cac5461c16&units=metric`)
+            $http.get(`https://api.openweathermap.org/data/2.5/weather?&q=${q}&appid=${API_KEY}&units=metric`)
                 .then(({data})=>{
                     console.log(data)
                     $scope.icon = data.weather[0].icon
