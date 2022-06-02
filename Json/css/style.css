@@ -50,20 +50,23 @@ body {
     bottom: 12vw;
     left: 5vw;
 }
+.header-time{
+    display: flex;
+    position: absolute;
+    top: 44px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+}
 .date {
-    float: left;
-    color: #010a3d;
-    font-size: 3em;
-    margin-left: 24px;
-    margin-top: 52px;
+    font-weight: 500;
+    font-size: 1.5em;
     display: inline-block;
+    margin-right: 8px;
 }
 .time {
-    float: left;
-    color: #010a3d;
-    font-size: 3em;
-    margin-top: 52px;
-    margin-left: 40px;
+    font-weight: 500;
+    font-size: 1.5em;
     display: inline-block;
 }
 .container {
@@ -75,7 +78,7 @@ body {
 .sun {
     width: 10vw;
     height: calc(10vw);
-    background-color: #fde477;
+    background-color: #e29f42;
     border-radius: 50%;
     position: absolute;
     bottom: 0;
@@ -382,7 +385,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 16%;
+    top: 13%;
 }
 .input-search{
     height: 50px;
