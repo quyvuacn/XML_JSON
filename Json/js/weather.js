@@ -24,7 +24,7 @@ weatherApp.controller('WeatherCtrl', function($scope,$http){
                     $scope.wind_speed = data.wind.speed
                     $scope.name = data.name
                     $scope.country = data.sys.country
-                }).catch(err=>{
+                }).catch(()=>{
                     alert('Thành phố nhập không hợp lệ')
             })
         }
