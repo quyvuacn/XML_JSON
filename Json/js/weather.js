@@ -5,7 +5,9 @@ const weatherApp = angular.module('weatherApp',[])
 weatherApp.controller('WeatherCtrl', function($scope,$http){
     
     $http.get(API_WEATHER).then(function({data}){
-        $scope.img_url = IMG_URL
+        console.log(data)
+        $scope.icon = data.weather[0].icon
+        $scope.img_src = `https://openweathermap.org/img/wn/${$scope.icon}@4x.png`
         $scope.current=data.main.temp
         $scope.temp_max = data.main.temp_max
         $scope.temp_min = data.main.temp_min
