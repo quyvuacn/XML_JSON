@@ -1,5 +1,8 @@
 var today = new Date();
 var weekDay = '';
+var date = weekDay + String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(160) + today.getDate() + '-'+ (today.getMonth() + 1) + '-' + today.getFullYear();
+var hour = today.getHours();
+var minute = today.getMinutes();
 switch (today.getDay()) {
     case 0:
         weekDay = 'Sun';
@@ -23,9 +26,18 @@ switch (today.getDay()) {
         weekDay = 'Sat';
         break;
 }
-var date = weekDay + String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(160) + today.getDate() + '-'+ (today.getMonth() + 1) + '-' + today.getFullYear();
-var hour = today.getHours();
-var time = hour + ':' + today.getMinutes();
+setInterval(()=>{
+    today = new Date()
+    date = weekDay + String.fromCharCode(160) + String.fromCharCode(160) + String.fromCharCode(160) + today.getDate() + '-'+ (today.getMonth() + 1) + '-' + today.getFullYear();
+    hour = today.getHours();
+    minute = today.getMinutes();
+    document.querySelector('.date').textContent = date
+    document.querySelector('.time').textContent = `${hour}:${minute}`
+},1000)
+
+
+
+
 
 
 // set bg color and sun's position depend on time
@@ -52,26 +64,9 @@ if (hour > 5 && today.getHours() <= 7) {
     $('.sun').css('background-color', '#e6dde4');
     $('.date').css('color', '#e6dde4');
     $('.time').css('color', '#e6dde4');
-    $('.google a').css('color', '#e6dde4');
-    $('.google path').css('fill', '#e6dde4');
+
 }
 
-// icon set: https://www.iconfinder.com/iconsets/weather-color-2
-var cloudy = '<img src="images/cloudy.png">';
-var foggy = '<img src="images/foggy.png">';
-var heavy_rain = '<img src="images/heavy_rain.png">';
-var light_rain = '<img src="images/light_rain.png">';
-var light_sun = '<img src="images/light_sun.png">';
-var moderate_rain = '<img src="images/moderate_rain.png">';
-var rainy_sun = '<img src="images/rainy_sun.png">';
-var snowy = '<img src="images/snowy.png">';
-var storm = '<img src="images/storm.png">';
-var sun_foggy = '<img src="images/sun_foggy.png">';
-var sunny = '<img src="images/sunny.png">';
-var sun_windy = '<img src="images/sun_windy.png">';
-var tornado = '<img src="images/tornado.png">';
-var thunder = '<img src="images/thunder.png">';
-var windy = '<img src="images/windy.png">';
-var hail_rain = '<img src="images/hail_rain.png">';
+
 
 
